@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Fallout lockpick</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"/>
+    <style>
+      body{
+        overflow:hidden;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      #PicklockGame{
+        top: 0;
+        margin-left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        width: 100%;
+        background: #34495E;
+      }
+
+      .pop-out{
+        position: fixed;
+        width: 140%;
+        height: 100%;
+        text-align: center;
+        z-index: 1;
+        top: 0;
+        left: -20%;
+      }
+
+      .pop-stripe.show{
+        opacity: 1;
+      }
+
+      .pop-stripe{
+        font-size: 120px;
+        color: #ecf0f1;
+        margin-top: 160px;
+        text-shadow: 2px 2px #2c3e50;
+        padding: 30px 0;
+        opacity: 0;
+        transition: 0.2s opacity;
+      }
+
+      .score{
+        position: fixed;
+        text-align: center;
+        top: 12%;
+        width: 100%;
+        z-index: 1;
+        color: #ecf0f1;
+        text-shadow: 2px 2px #2c3e50;
+        font-size: 40px;
+      }
+      .info{
+        position: absolute;
+        z-index: 2;
+        width: 400px;
+        bottom: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.38);
+        padding: 20px;
+        color: #ecf0f1;
+        font-size: 1.1em;
+        line-height: 1.6em;
+        text-shadow: 2px 2px #2c3e50;
+      }
+      a:visited{
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pop-out">
+	    <div class="pop-stripe"></div>
+	  </div>
+    <div class="score"></div>
+    <div class="info">
+      Lockpicking minigame written in HTML canvas and babel. Inspired by the Fallout series. <br><br>
+      <strong>Move mouse</strong> left or right to rotate pin. <br>
+      <strong>Mouse press</strong> to rotate lock. <br><br>
+      A pen by <a href="https://twitter.com/KarlSolgard" target="_blank">Karl Solgård</a>
+    </div>
+    <canvas id="PicklockGame"></canvas>
+    <script type="text/javascript" src="compiled.js"></script>
+  </body>
+</html>
